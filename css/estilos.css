@@ -1,0 +1,203 @@
+                @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&family=Oswald&display=swap');
+                /*fontes foram do google fontes ok*/
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Lato', sans-serif;
+                    /*no meu codigo eu gosto de colocar junto com o  zeramento da pagina a font family*/
+                }
+                /*fundo da tela*/
+                
+                html {
+                    width: 100vw;
+                    /*utilizar a largura maxima da tela*/
+                    height: 100vh;
+                    /*altura maxima da tela*/
+                    font-size: 62.5%;
+                    /*tamanho da letra no projeto*/
+                    color: black;
+                    /*cor da letra no projeto*/
+                }
+                
+                body {
+                    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(../img/logo\ 01.jpg);
+                    /*deixar a cor de fundo do projeto mais escura dando um efeito diferente podendo usar varios tipos de tonalidade no projeto assim vc tbm pode colocar img que vc quiser sobrepondo dentro da tonalidade escolhida*/
+                    background-position: center;
+                    /*centralizar img do projeto*/
+                    background-size: cover;
+                    /*define o tamanho da imagem de fundo do elemento . A imagem pode ser deixada em seu tamanho natural, esticada ou restringida para caber no espaço disponível*/
+                    background-position-y: 0px;
+                    /*define a posição vertical inicial para cada imagem de fundo*/
+                    background-repeat: no-repeat;
+                    /*não repetir a img do fundo do projeto*/
+                }
+                /*menu-header-nav*/
+                
+                header {
+                    width: 100%;
+                    /*vai pegar total de 100% tudo altura maxima*/
+                    height: 7vh;
+                    /*cabeçalho vai ficar 7 de altura*/
+                    background: rgb(22, 22, 22, 0.2);
+                }
+                
+                .menu-container {
+                    color: white;
+                    text-transform: uppercase;
+                    /*deixar todos os textos do projeto com letra maiuscula*/
+                    height: 100%;
+                    /*altura maxima*/
+                    display: flex;
+                    /*separar a( logo) do (menu )ficando um do lado do outro*/
+                    justify-content: space-around;
+                    /*dando distanciamento do menu e do logo no meio e nas bordas*/
+                    align-items: center;
+                    /*distanciamento dos intens dentro dos 7vh dentro do  projeto*/
+                    font-size: 1.8rem;
+                    /*e o mesmo que vc colocar 18px*/
+                }
+                
+                .logo {
+                    font-size: 1.8rem;
+                    letter-spacing: 0.4rem;
+                    /*distanciamento das letras*/
+                    cursor: pointer;
+                    /*sever quando vc passar sobre letra ou link no projeto aparecer uma mão no mouse*/
+                }
+                
+                .menu-container .list-itens {
+                    display: flex;
+                    /*lado a lado*/
+                    list-style: none;
+                    /*limpa a lista*/
+                    gap: 10px;
+                    /*distancimento das letras*/
+                }
+                
+                .menu-container .list-itens a {
+                    text-decoration: none;
+                    /*tirar as marcações que ficam na lista*/
+                    color: white;
+                    padding: 1.5rem;
+                    /*espaço para deixar mais visivil no projeto*/
+                    transform: 2ms ease-in;
+                    /*efeito quem fica abaixo da letras do menu*/
+                    position: relative;
+                    /*efeito funcionar position tem q ser relative*/
+                }
+                /*before cria um pseudo-elemento que é o primeiro filho do elemento atingido. É frequentemente utilizado para adicionar conteúdo decorativo à um element utilizando a propriedade content . Este elemento é inline por padrão.*/
+                
+                .menu-container .list-itens a:before {
+                    content: '';
+                    /*quando vc usar um before sempre vai ter um content*/
+                    position: absolute;
+                    /*sempre que vc usar position absolute a letra (A) sempre sera relative*/
+                    bottom: 0px;
+                    left: 0px;
+                    /* o efeito começara pela esquerda*/
+                    width: 0px;
+                    height: 1px;
+                    background-color: rgb(0, 255, 255);
+                    /*cor da linha do efeito*/
+                    transition: all 1.5s ease;
+                    /*segundos para o efeito acontecer e sumir*/
+                }
+                /*efeitos no menu sera feito aqui,.menu-container (.list-itens a:before,.menu-container .list-itens a:hover:before)*/
+                
+                .menu-container .list-itens a:hover:before {
+                    width: 100%;
+                    /*para o efeito funcionar vc precisa colocar em houver, asim dentro do menu funcionara o efeito de 100% de largura*/
+                }
+                /*centro do conteudo principal*/
+                
+                main {
+                    height: 93vh;
+                    /*já foi utilizado 7vh agora totalizando 100vh utilizando toda pagina */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .main-container {
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    /*colocar o conteudo em coluna um em cima outro*/
+                    justify-content: center;
+                    align-items: center;
+                    /*quando se utilizar flex direction column o alinhamento ficara na horizontal*/
+                }
+                /*text do conteudo principal*/
+                
+                .text-principal {
+                    width: 850px;
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+                
+                .cor {
+                    color: aqua;
+                }
+                
+                .text-segundario {
+                    margin-bottom: 7rem;
+                    font-size: 2rem;
+                    color: rgb(11, 172, 212);
+                    text-transform: uppercase;
+                }
+                /*botton*/
+                
+                .btns {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                }
+                
+                .btns button {
+                    width: 250px;
+                    height: 60px;
+                    cursor: pointer;
+                    border: 1px solid white;
+                    color: white;
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    /*para ver o conteudo dentro da caixa*/
+                    font-weight: bold;
+                    /*deixar a letra mais robusta*/
+                    letter-spacing: 0.2rem;
+                    /*distanciamento das letras*/
+                    border-radius: 20px;
+                    /*deixar a borda redonda*/
+                    position: relative;
+                    transition: 1.5s;
+                }
+                /*efeitos button, btns*/
+                
+                .btns button:hover {
+                    color: rgb(229, 248, 54);
+                    /*efeito de cor dentro do text em button*/
+                    border: none;
+                    /*efeito na hora q passa mouse por cima fica sem borda*/
+                }
+                
+                .btns button:before {
+                    content: '';
+                    border-radius: 20px;
+                    bottom: 0px;
+                    left: 0px;
+                    position: absolute;
+                    width: 0px;
+                    height: 60px;
+                    background-color: rgb(99, 160, 160);
+                    z-index: -1;
+                    /*para q o  efeito apareça tem q usar*/
+                    transition: 1s;
+                }
+                
+                .btns button:hover:before {
+                    /*hover sempre sera utilizado para dar um efeito sobre oque vc quiser  e colocar no projeto*/
+                    width: 100%;
+                }
